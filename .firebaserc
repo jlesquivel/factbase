@@ -1,0 +1,11 @@
+{
+  "targets": {
+    "factbase-e4c59": {
+      "hosting": {
+        "factbase": [
+          "factbase-e4c59"
+        ]
+      }
+    }
+  }
+}
