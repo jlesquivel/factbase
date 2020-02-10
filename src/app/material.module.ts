@@ -11,7 +11,8 @@ import {
   MatSidenavModule,
   MatListModule,
   MatMenuModule,
-  MatDialogModule
+  MatDialogModule,
+  MatTableModule
 } from '@angular/material';
 
 const myModule = [
@@ -24,7 +25,8 @@ const myModule = [
   MatListModule,
   MatMenuModule,
   ReactiveFormsModule,
-  MatDialogModule
+  MatDialogModule,
+  MatTableModule
 ];
 
 @NgModule({

@@ -1,5 +1,7 @@
-<!-- <div class="">
-  <form [formGroup]="form" (ngSubmit)="submit()">
+<h2>{{ this.datos.name }}</h2>
+
+<div class="">
+  <form [formGroup]="form">
     <formly-form
       [model]="model"
       [fields]="fields"
@@ -8,8 +10,11 @@
     ></formly-form>
     <br />
     <br />
-    <button type="submit" mat-raised-button color="primary">Enviar</button>
-  </form>
-</div> -->
 
-hola {{ messaje }}
+    <mat-dialog-actions>
+      <button class="mat-raised-button"(click)="close()">Salir</button>
+      <button class="mat-raised-button mat-primary"(click)="save()">Enviar</button>
+  </mat-dialog-actions>
+
+  </form>
+</div>
