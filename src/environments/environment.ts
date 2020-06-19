@@ -14,6 +14,6 @@ export const environment = {
     appId: '1:970307103818:web:c0a039c66e4a8fb7400ab3',
     measurementId: 'G-67Z8T6326P'
   },
-  APP_TOOLBAR_TITLE: 'SIA'
+  APP_TOOLBAR_TITLE: 'PlanillaPro'
 };
 
