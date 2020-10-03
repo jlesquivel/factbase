@@ -1,0 +1,27 @@
+[
+  {
+    "fieldGroupClassName": "display-flex",
+    "fieldGroup": [
+      {
+        "key": "nombre",
+        "type": "input",
+
+        "className": "flex-3",
+        "templateOptions": {
+          "label": "Nombre",
+          "required": "true"
+        }
+      },
+      {
+        "key": "edad",
+        "type": "input",
+        "className": "flex-1",
+        "templateOptions": {
+          "label": "Edad",
+          "type": "number",
+          "required": "true"
+        }
+      }
+    ]
+  }
+]

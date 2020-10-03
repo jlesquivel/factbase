@@ -5,6 +5,7 @@ import { MatDialog, MatDialogRef } from '@angular/material/dialog';
 import { ModalComponent } from '../modal/modal.component';
 import { ActivatedRoute, Params } from '@angular/router';
 import { AngularFirestore } from '@angular/fire/firestore';
+import { HttpClient } from '@angular/common/http';
 
 @Component({
   selector: 'app-crud',
@@ -23,30 +24,10 @@ export class CrudComponent implements OnInit {
   constructor(
     private db: AngularFirestore,
     public dialog: MatDialog,
-    private rutaActiva: ActivatedRoute
+    private rutaActiva: ActivatedRoute,
+    private http: HttpClient
   ) {
     this.nombre = this.rutaActiva.snapshot.params.id;
-    console.log(this.nombre);
-
-    this.getFormulario();
-
-    this.getData();
-  }
-
-  getFormulario() {
-    const docRef = this.db
-      .collection('forms')
-      .doc(this.nombre)
-      .get();
-
-    const getDoc = docRef.subscribe(doc => {
-      if (!doc.exists) {
-        console.log('No such document!');
-      } else {
-        this.datos = doc.data();
-        this.displayedColumns = this.datos.columns;
-      }
-    });
   }
 
   getData() {
@@ -57,12 +38,19 @@ export class CrudComponent implements OnInit {
         console.log('No such document!');
       } else {
         this.lista = res.docs;
-        console.log(res.docs);
+        // console.log(res.docs);
       }
     });
   }
 
-  ngOnInit() {}
+  ngOnInit() {
+    const configUrl = 'assets/json/frm-empleados.json';
+    this.http
+      .get(configUrl)
+      .subscribe(fields => [(this.datos.data = JSON.stringify(fields))]);
+    this.datos.name = 'Prueba';
+    console.log(this.datos.data);
+  }
 
   openDialog(): void {
     const registro = { nombre: 'Jose', correo: 'jlesquivel@hotmail.com' };

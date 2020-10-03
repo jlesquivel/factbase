@@ -5,11 +5,17 @@ import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MaterialModule } from './material.module';
 import { environment } from 'src/environments/environment';
+import { HttpClientModule } from '@angular/common/http';
 
 /* FIREBASE */
-import { AngularFirestoreModule } from '@angular/fire/firestore';
+import {
+  AngularFirestoreModule,
+  SETTINGS,
+  AngularFirestore
+} from '@angular/fire/firestore';
 import { AngularFireStorageModule, StorageBucket } from '@angular/fire/storage';
 import { AngularFireModule } from '@angular/fire';
+
 /* FORMULARIOS DINAMICOS*/
 import { ReactiveFormsModule } from '@angular/forms';
 import { FormlyModule } from '@ngx-formly/core';
@@ -28,15 +34,26 @@ import { ModalComponent } from './shared/components/modal/modal.component';
     AppRoutingModule,
     MaterialModule,
     AngularFireModule.initializeApp(environment.firebaseConfig),
-    AngularFirestoreModule,
+    AngularFirestoreModule.enablePersistence(),
     AngularFireStorageModule,
     ReactiveFormsModule,
     FormlyModule.forRoot(),
-    FormlyMaterialModule
+    FormlyMaterialModule,
+    HttpClientModule
   ],
-  entryComponents: [ ModalComponent],
+  entryComponents: [ModalComponent],
   providers: [
-    { provide: StorageBucket, useValue: 'gs://factbase-e4c59.appspot.com' }
+    AngularFirestore,
+    { provide: StorageBucket, useValue: 'gs://factbase-e4c59.appspot.com' },
+    {
+      provide: SETTINGS,
+      useValue: environment.production
+        ? undefined
+        : {
+            host: 'localhost:8080',
+            ssl: false
+          }
+    }
   ],
   bootstrap: [AppComponent]
 })

@@ -1,8 +1,12 @@
 <div class="example-container" [class.example-is-mobile]="mobileQuery.matches">
   <mat-toolbar color="primary">
+
+    <!--
+  ************* **************** ************** TOOLBAR
+   -->
     <mat-toolbar-row>
       <button mat-icon-button>
-        <mat-icon (click)="sidenav.toggle()">home</mat-icon>
+        <mat-icon (click)="sidenav.toggle()">menu</mat-icon>
       </button>
       <h1>{{ APP_TITLE }}</h1>
       <span class="menu-spacer"></span>
@@ -30,14 +34,9 @@
       [mode]="mobileQuery.matches ? 'over' : 'side'"
       [fixedInViewport]="mobileQuery.matches"
       fixedTopGap="56"
-      (click)="sidenav.toggle()"
-    >
-      <mat-toolbar>
-        <mat-toolbar-row>
-          <h2>{{ APP_TITLE }}</h2>
-        </mat-toolbar-row>
-      </mat-toolbar>
+      (click)="mobileQuery.matches ? sidenav.toggle() : null "
 
+    >
       <mat-nav-list>
         <a mat-list-item [routerLink]="['/crud', 'fFormularios']">
           <mat-icon matListIcon>perm_identity</mat-icon> Empleados
@@ -56,7 +55,7 @@
       </mat-nav-list>
     </mat-sidenav>
     <mat-sidenav-content>
-      <div style="height: 88vh;">
+      <div style="height: 88vh">
         <router-outlet></router-outlet>
       </div>
     </mat-sidenav-content>
