@@ -4,7 +4,7 @@
   font-family: 'Material Icons';
   font-style: normal;
   font-weight: 400;
-  src: url(./assets/fonts/flUhRq6tzZclQEJ-Vdg-IuiaDsNc.woff2 ) format('woff2');
+  src: url(./assets/fonts/flUhRq6tzZclQEJ-Vdg-IuiaDsNc.woff2) format('woff2');
 }
 
 .material-icons {
@@ -23,8 +23,15 @@
   -webkit-font-smoothing: antialiased;
 }
 
+.md-fab-bottom-right {
+  position: fixed !important;
+  right: 15px; /* Add this and change value to set the margin you want */
+  bottom: 15px;
+}
+
 .display-flex {
   display: flex;
+  flex-wrap: wrap;
 }
 .flex-1 {
   flex: 1;
@@ -45,6 +52,21 @@
   flex: 6;
 }
 
+[class*='flex-'] {
+  padding-left: 5px;
+  padding-right: 5px;
+}
 
-html, body { height: 100%; }
-body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+[class*='flex-']:first-child {
+  padding-left: 0px;
+  padding-right: 10px;
+}
+
+html,
+body {
+  height: 100%;
+}
+body {
+  margin: 0;
+  font-family: Roboto, 'Helvetica Neue', sans-serif;
+}

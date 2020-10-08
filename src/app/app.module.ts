@@ -13,13 +13,14 @@ import {
   SETTINGS,
   AngularFirestore
 } from '@angular/fire/firestore';
-import { AngularFireStorageModule, StorageBucket } from '@angular/fire/storage';
+import { AngularFireStorageModule } from '@angular/fire/storage';
 import { AngularFireModule } from '@angular/fire';
 
 /* FORMULARIOS DINAMICOS*/
 import { ReactiveFormsModule } from '@angular/forms';
 import { FormlyModule } from '@ngx-formly/core';
 import { FormlyMaterialModule } from '@ngx-formly/material';
+import { FlexLayoutModule } from '@angular/flex-layout';
 
 /* COMPONENTES DEL SISTEMA */
 import { ToolbarComponent } from './shared/components/toolbar/toolbar.component';
@@ -33,6 +34,7 @@ import { ModalComponent } from './shared/components/modal/modal.component';
     BrowserAnimationsModule,
     AppRoutingModule,
     MaterialModule,
+    FlexLayoutModule,
     AngularFireModule.initializeApp(environment.firebaseConfig),
     AngularFirestoreModule.enablePersistence(),
     AngularFireStorageModule,
@@ -44,7 +46,6 @@ import { ModalComponent } from './shared/components/modal/modal.component';
   entryComponents: [ModalComponent],
   providers: [
     AngularFirestore,
-    { provide: StorageBucket, useValue: 'gs://factbase-e4c59.appspot.com' },
     {
       provide: SETTINGS,
       useValue: environment.production

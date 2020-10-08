@@ -12,6 +12,7 @@ import { MatMenuModule } from '@angular/material/menu';
 import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatTableModule } from '@angular/material/table';
 import { MatToolbarModule } from '@angular/material/toolbar';
+import { MatTooltipModule } from '@angular/material/tooltip';
 
 const myModule = [
   MatFormFieldModule,
@@ -24,7 +25,8 @@ const myModule = [
   MatMenuModule,
   ReactiveFormsModule,
   MatDialogModule,
-  MatTableModule
+  MatTableModule,
+  MatTooltipModule
 ];
 
 @NgModule({

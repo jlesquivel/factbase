@@ -1,5 +1,9 @@
 [
   {
+    "name": "Empleados",
+    "columns": "{'nombre','correo'}"
+  },
+  {
     "fieldGroupClassName": "display-flex",
     "fieldGroup": [
       {
@@ -9,6 +13,19 @@
         "className": "flex-3",
         "templateOptions": {
           "label": "Nombre",
+          "required": "true",
+          "onBlur": "to.focused=false",
+          "onFocus": "to.focused=true",
+          "focused": "true"
+        }
+      },
+      {
+        "key": "apellidos",
+        "type": "input",
+
+        "className": "flex-3",
+        "templateOptions": {
+          "label": "Apellidos",
           "required": "true"
         }
       },
@@ -19,6 +36,21 @@
         "templateOptions": {
           "label": "Edad",
           "type": "number",
+          "required": "true"
+        }
+      }
+    ]
+  },
+  {
+    "fieldGroupClassName": "display-flex",
+    "fieldGroup": [
+      {
+        "key": "correo",
+        "type": "input",
+
+        "className": "flex-3",
+        "templateOptions": {
+          "label": "Correo",
           "required": "true"
         }
       }

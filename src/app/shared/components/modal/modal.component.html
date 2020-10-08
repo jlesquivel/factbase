@@ -11,10 +11,14 @@
     <br />
     <br />
 
-    <mat-dialog-actions>
-      <button class="mat-raised-button "(click)="close()" style="margin:5px;">Cancelar</button>
-      <button class="mat-raised-button mat-primary"(click)="save()" style="margin:25px;">Guardar</button>
-  </mat-dialog-actions>
-
+    <mat-dialog-actions
+      class="button-row"
+      style="display: flex; flex-direction: row; justify-content: space-between"
+    >
+      <button class="mat-raised-button" (click)="close()">Cancelar</button>
+      <button class="mat-raised-button mat-primary" (click)="save()">
+        Guardar
+      </button>
+    </mat-dialog-actions>
   </form>
 </div>

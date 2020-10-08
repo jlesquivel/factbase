@@ -1,0 +1,37 @@
+[
+  {
+    "label": "Ingresar",
+    "icon": "login",
+    "showOnMobile": true,
+    "showOnTablet": true,
+    "showOnDesktop": true
+  },
+  {
+    "label": "Nosotros",
+    "icon": "info",
+    "showOnMobile": false,
+    "showOnTablet": true,
+    "showOnDesktop": true
+  },
+  {
+    "label": "Precios",
+    "icon": "attach_money",
+    "showOnMobile": false,
+    "showOnTablet": false,
+    "showOnDesktop": true
+  },
+  {
+    "label": "Blog",
+    "icon": "rss_feed",
+    "showOnMobile": false,
+    "showOnTablet": false,
+    "showOnDesktop": false
+  },
+  {
+    "label": "otro",
+    "icon": "menu",
+    "showOnMobile": true,
+    "showOnTablet": false,
+    "showOnDesktop": false
+  }
+]
