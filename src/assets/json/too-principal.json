@@ -1,0 +1,24 @@
+[
+  {
+    "label": "Ingreso",
+    "icon": "login",
+    "showOnMobile": true,
+    "showOnTablet": true,
+    "showOnDesktop": true
+  },
+  {
+    "label": "Nosotros",
+    "icon": "info",
+    "showOnMobile": false,
+    "showOnTablet": true,
+    "showOnDesktop": true
+  },
+
+  {
+    "label": "Blog",
+    "icon": "rss_feed",
+    "showOnMobile": false,
+    "showOnTablet": false,
+    "showOnDesktop": false
+  }
+]

@@ -1,37 +1,53 @@
 [
   {
-    "label": "Ingresar",
-    "icon": "login",
+    "label": "Trabajadores",
+    "icon": "perm_identity",
+    "link": ['/crud', 'frm-empleados'],
     "showOnMobile": true,
     "showOnTablet": true,
     "showOnDesktop": true
   },
   {
-    "label": "Nosotros",
-    "icon": "info",
+    "label": ""
+  },
+  {
+    "label": "Departamentos",
+    "icon": "apps",
+    "link": "'/'",
     "showOnMobile": false,
-    "showOnTablet": true,
+    "showOnTablet": false,
     "showOnDesktop": true
   },
   {
-    "label": "Precios",
+    "label": "Categorias",
+    "icon": "list",
+    "link": "'/'",
+    "showOnMobile": false,
+    "showOnTablet": false,
+    "showOnDesktop": true
+  },
+  {
+    "label": "Rubros",
     "icon": "attach_money",
+    "link": "'/'",
     "showOnMobile": false,
     "showOnTablet": false,
     "showOnDesktop": true
   },
   {
-    "label": "Blog",
-    "icon": "rss_feed",
+    "label": "Planillas",
+    "icon": "attach_money",
+    "link": "'/'",
     "showOnMobile": false,
     "showOnTablet": false,
-    "showOnDesktop": false
+    "showOnDesktop": true
   },
   {
-    "label": "otro",
-    "icon": "menu",
-    "showOnMobile": true,
+    "label": "Salir",
+    "icon": "out",
+    "link": "'/'",
+    "showOnMobile": false,
     "showOnTablet": false,
-    "showOnDesktop": false
+    "showOnDesktop": true
   }
 ]

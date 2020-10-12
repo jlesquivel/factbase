@@ -1,7 +1,20 @@
 [
   {
-    "name": "Empleados",
-    "columns": "{'nombre','correo'}"
+    "name": "Empleado",
+    "columns": ["id", "nombre", "apellidos"],
+    "id": "Empleados"
+  },
+  {
+    "key": "id",
+    "type": "input",
+    "className": "flex-3",
+    "templateOptions": {
+      "label": "Identificacion",
+      "required": "true",
+      "onBlur": "to.focused=false",
+      "onFocus": "to.focused=true",
+      "focused": "true"
+    }
   },
   {
     "fieldGroupClassName": "display-flex",
@@ -9,20 +22,15 @@
       {
         "key": "nombre",
         "type": "input",
-
         "className": "flex-3",
         "templateOptions": {
           "label": "Nombre",
-          "required": "true",
-          "onBlur": "to.focused=false",
-          "onFocus": "to.focused=true",
-          "focused": "true"
+          "required": "true"
         }
       },
       {
         "key": "apellidos",
         "type": "input",
-
         "className": "flex-3",
         "templateOptions": {
           "label": "Apellidos",
@@ -47,7 +55,6 @@
       {
         "key": "correo",
         "type": "input",
-
         "className": "flex-3",
         "templateOptions": {
           "label": "Correo",

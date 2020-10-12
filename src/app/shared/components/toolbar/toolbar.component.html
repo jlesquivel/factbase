@@ -49,20 +49,12 @@
       (click)="mobileQuery.matches ? sidenav.toggle() : null"
     >
       <mat-nav-list>
-        <a mat-list-item [routerLink]="['/crud', 'frm-empleados']">
-          <mat-icon matListIcon>perm_identity</mat-icon> Trabajadores
+        <a
+          mat-list-item
+          *ngFor="let item of sidenavItems"
+          [routerLink]="item.link"
+          ><mat-icon matListIcon>{{ item.icon }}</mat-icon> {{ item.label }}
         </a>
-        <a mat-list-item [routerLink]="'/'"> Departamentos</a>
-        <a mat-list-item [routerLink]="'/'"> Categorias</a>
-
-        <mat-divider></mat-divider>
-        <a mat-list-item [routerLink]="'/'"> Rubros </a>
-        <a mat-list-item [routerLink]="'/'"> Planillas </a>
-        <a mat-list-item [routerLink]="'/'"> ....</a>
-
-        <a mat-list-item (click)="sidenav.toggle()" href="" mat-list-item
-          >Salir</a
-        >
       </mat-nav-list>
     </mat-sidenav>
     <mat-sidenav-content>

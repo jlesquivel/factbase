@@ -15,8 +15,11 @@
       class="button-row"
       style="display: flex; flex-direction: row; justify-content: space-between"
     >
-      <button class="mat-raised-button" (click)="close()">Cancelar</button>
-      <button class="mat-raised-button mat-primary" (click)="save()">
+      <button mat-raised-button color="basic" (click)="close()">
+        Cancelar
+      </button>
+      <button mat-raised-button color="warn" (click)="delete()">Borra</button>
+      <button mat-raised-button color="primary" (click)="save()">
         Guardar
       </button>
     </mat-dialog-actions>

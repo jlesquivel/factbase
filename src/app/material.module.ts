@@ -13,6 +13,7 @@ import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatTableModule } from '@angular/material/table';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatTooltipModule } from '@angular/material/tooltip';
+import { MatPaginatorModule } from '@angular/material/paginator';
 
 const myModule = [
   MatFormFieldModule,
@@ -26,7 +27,8 @@ const myModule = [
   ReactiveFormsModule,
   MatDialogModule,
   MatTableModule,
-  MatTooltipModule
+  MatTooltipModule,
+  MatPaginatorModule
 ];
 
 @NgModule({

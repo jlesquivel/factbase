@@ -8,7 +8,7 @@ import { Observable } from 'rxjs';
 export class JsonService {
   constructor(private http: HttpClient) {}
 
-  public getJSON(configUrl): Observable<any> {
-    return this.http.get(configUrl);
+  public getJSON(configUrl) {
+    return this.http.get(configUrl).toPromise();
   }
 }
