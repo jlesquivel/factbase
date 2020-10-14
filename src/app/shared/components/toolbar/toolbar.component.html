@@ -54,6 +54,8 @@
           *ngFor="let item of sidenavItems"
           [routerLink]="item.link"
           ><mat-icon matListIcon>{{ item.icon }}</mat-icon> {{ item.label }}
+
+          <mat-divider *ngIf="item.divider"></mat-divider>
         </a>
       </mat-nav-list>
     </mat-sidenav>

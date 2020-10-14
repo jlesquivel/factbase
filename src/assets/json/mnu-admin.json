@@ -2,18 +2,17 @@
   {
     "label": "Trabajadores",
     "icon": "perm_identity",
-    "link": ['/crud', 'frm-empleados'],
+    "link": ["/crud", "frm-empleados"],
+    "divider": true,
     "showOnMobile": true,
     "showOnTablet": true,
     "showOnDesktop": true
   },
   {
-    "label": ""
-  },
-  {
     "label": "Departamentos",
     "icon": "apps",
-    "link": "'/'",
+    "link": "/",
+    "divider": false,
     "showOnMobile": false,
     "showOnTablet": false,
     "showOnDesktop": true
@@ -22,6 +21,7 @@
     "label": "Categorias",
     "icon": "list",
     "link": "'/'",
+    "divider": false,
     "showOnMobile": false,
     "showOnTablet": false,
     "showOnDesktop": true
@@ -30,6 +30,7 @@
     "label": "Rubros",
     "icon": "attach_money",
     "link": "'/'",
+    "divider": false,
     "showOnMobile": false,
     "showOnTablet": false,
     "showOnDesktop": true
@@ -38,6 +39,16 @@
     "label": "Planillas",
     "icon": "attach_money",
     "link": "'/'",
+    "divider": false,
+    "showOnMobile": false,
+    "showOnTablet": false,
+    "showOnDesktop": true
+  },
+  {
+    "label": "Tablas",
+    "icon": "attach_money",
+    "link": "'/'",
+    "divider": false,
     "showOnMobile": false,
     "showOnTablet": false,
     "showOnDesktop": true
@@ -46,6 +57,7 @@
     "label": "Salir",
     "icon": "out",
     "link": "'/'",
+    "divider": false,
     "showOnMobile": false,
     "showOnTablet": false,
     "showOnDesktop": true
